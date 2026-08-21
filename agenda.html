@@ -1,128 +1,440 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agenda — Desa Sampetan</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<script src="nav.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agenda — Desa Sampetan</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript Navbar -->
+    <script src="nav.js" defer></script>
 </head>
+
 <body>
 
 <header>
-  <nav class="nav">
-    <a href="index.html" class="brand" style="text-decoration:none;">
-      <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
-  <path d="M20 4 L34 16 V34 H6 V16 Z" fill="#33502E"/>
-  <path d="M20 4 L34 16 H6 Z" fill="#9C5A34"/>
-  <rect x="16" y="22" width="8" height="12" fill="#F8F7EF"/>
-</svg>
-      <span>Desa Sampetan<span class="brand-sub">± 900 MDPL · Kaki Gunung Merbabu</span></span>
-    </a>
-    <ul class="navlinks">
-      <li><a href="index.html"><span class="pos-tag"></span>Beranda</a></li>
-      <li><a href="profil.html"><span class="pos-tag"></span>Profil Desa</a></li>
-      <li><a href="layanan.html"><span class="pos-tag"></span>Layanan</a></li>
-      <li><a href="agenda.html" class="active"><span class="pos-tag"></span>Agenda</a></li>
-      <li><a href="pengumuman.html"><span class="pos-tag"></span>Pengumuman</a></li>
-      <li><a href="kontak.html"><span class="pos-tag"></span>Kontak</a></li>
-    </ul>
-    <button class="navtoggle" aria-label="Buka menu">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
-  </nav>
+
+    <nav class="nav">
+
+        <a href="index.html" class="brand" style="text-decoration:none;">
+
+            <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
+
+                <path
+                    d="M20 4 L34 16 V34 H6 V16 Z"
+                    fill="#33502E"/>
+
+                <path
+                    d="M20 4 L34 16 H6 Z"
+                    fill="#9C5A34"/>
+
+                <rect
+                    x="16"
+                    y="22"
+                    width="8"
+                    height="12"
+                    fill="#F8F7EF"/>
+
+            </svg>
+
+            <span>
+                Desa Sampetan
+
+                <span class="brand-sub">
+                    ± 900 MDPL · Kaki Gunung Merbabu
+                </span>
+
+            </span>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <ul class="navlinks">
+
+            <li>
+                <a href="index.html">
+                    <span class="pos-tag"></span>
+                    Beranda
+                </a>
+            </li>
+
+            <li>
+                <a href="profil.html">
+                    <span class="pos-tag"></span>
+                    Profil Desa
+                </a>
+            </li>
+
+            <li>
+                <a href="layanan.html">
+                    <span class="pos-tag"></span>
+                    Layanan
+                </a>
+            </li>
+
+            <li>
+                <a href="agenda.html" class="active">
+                    <span class="pos-tag"></span>
+                    Agenda
+                </a>
+            </li>
+
+            <li>
+                <a href="pengumuman.html">
+                    <span class="pos-tag"></span>
+                    Pengumuman
+                </a>
+            </li>
+
+            <li>
+                <a href="kontak.html">
+                    <span class="pos-tag"></span>
+                    Kontak
+                </a>
+            </li>
+
+        </ul>
+
+
+        <!-- HAMBURGER MENU -->
+
+        <button
+            class="navtoggle"
+            id="navToggle"
+            aria-label="Buka menu"
+            aria-expanded="false"
+            type="button">
+
+            <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6">
+
+                <path d="M3 6h18M3 12h18M3 18h18"/>
+
+            </svg>
+
+        </button>
+
+    </nav>
+
 </header>
 
-<section class="page-hero" style="background:var(--pine-deep);">
-  <div class="wrap">
-    <p class="eyebrow"> · Agenda Desa</p>
-    <h1>Kegiatan yang akan berlangsung</h1>
-    <p>Catat tanggalnya — sebagian besar kegiatan terbuka untuk seluruh warga.</p>
-  </div>
+
+<!-- HERO -->
+
+<section
+    class="page-hero"
+    style="background:var(--pine-deep);">
+
+    <div class="wrap">
+
+        <p class="eyebrow">
+            · Agenda Desa
+        </p>
+
+        <h1>
+            Kegiatan yang akan berlangsung
+        </h1>
+
+        <p>
+            Catat tanggalnya — sebagian besar kegiatan terbuka
+            untuk seluruh warga.
+        </p>
+
+    </div>
+
 </section>
 
-<section class="agenda-band" style="padding-top:0;">
-  <div class="wrap">
-    <div class="agenda-list">
-      <div class="agenda-item">
-        <div class="agenda-date">AGU<strong>21</strong></div>
-        <div class="agenda-rule"></div>
-        <div class="agenda-body">
-          <h3>Musyawarah Rencana Pembangunan Desa</h3>
-          <span>09.00 WIB · Balai Desa Sampetan</span>
+
+<!-- AGENDA -->
+
+<section
+    class="agenda-band"
+    style="padding-top:0;">
+
+    <div class="wrap">
+
+        <div class="agenda-list">
+
+
+            <!-- AGENDA 1 -->
+
+            <div class="agenda-item">
+
+                <div class="agenda-date">
+                    AGU
+                    <strong>21</strong>
+                </div>
+
+                <div class="agenda-rule"></div>
+
+                <div class="agenda-body">
+
+                    <h3>
+                        Musyawarah Rencana Pembangunan Desa
+                    </h3>
+
+                    <span>
+                        09.00 WIB · Balai Desa Sampetan
+                    </span>
+
+                </div>
+
+                <span class="agenda-tag">
+                    Wajib RT/RW
+                </span>
+
+            </div>
+
+
+            <!-- AGENDA 2 -->
+
+            <div class="agenda-item">
+
+                <div class="agenda-date">
+                    AGU
+                    <strong>24</strong>
+                </div>
+
+                <div class="agenda-rule"></div>
+
+                <div class="agenda-body">
+
+                    <h3>
+                        Posyandu Balita & Ibu Hamil
+                    </h3>
+
+                    <span>
+                        08.00 WIB · Pos Kesehatan Dusun II
+                    </span>
+
+                </div>
+
+                <span class="agenda-tag">
+                    Umum
+                </span>
+
+            </div>
+
+
+            <!-- AGENDA 3 -->
+
+            <div class="agenda-item">
+
+                <div class="agenda-date">
+                    SEP
+                    <strong>02</strong>
+                </div>
+
+                <div class="agenda-rule"></div>
+
+                <div class="agenda-body">
+
+                    <h3>
+                        Kerja Bakti Saluran Irigasi
+                    </h3>
+
+                    <span>
+                        07.00 WIB · Titik kumpul Lapangan Desa
+                    </span>
+
+                </div>
+
+                <span class="agenda-tag">
+                    Gotong royong
+                </span>
+
+            </div>
+
+
+            <!-- AGENDA 4 -->
+
+            <div class="agenda-item">
+
+                <div class="agenda-date">
+                    SEP
+                    <strong>10</strong>
+                </div>
+
+                <div class="agenda-rule"></div>
+
+                <div class="agenda-body">
+
+                    <h3>
+                        Pelatihan UMKM: Pengemasan Produk
+                    </h3>
+
+                    <span>
+                        13.00 WIB · Aula Kantor Desa
+                    </span>
+
+                </div>
+
+                <span class="agenda-tag">
+                    Pendaftaran
+                </span>
+
+            </div>
+
+
+            <!-- AGENDA 5 -->
+
+            <div class="agenda-item">
+
+                <div class="agenda-date">
+                    SEP
+                    <strong>17</strong>
+                </div>
+
+                <div class="agenda-rule"></div>
+
+                <div class="agenda-body">
+
+                    <h3>
+                        Vaksinasi Ternak Rutin
+                    </h3>
+
+                    <span>
+                        08.00 WIB · Balai Dusun III
+                    </span>
+
+                </div>
+
+                <span class="agenda-tag">
+                    Kelompok Tani
+                </span>
+
+            </div>
+
+
+            <!-- AGENDA 6 -->
+
+            <div class="agenda-item">
+
+                <div class="agenda-date">
+                    SEP
+                    <strong>28</strong>
+                </div>
+
+                <div class="agenda-rule"></div>
+
+                <div class="agenda-body">
+
+                    <h3>
+                        Rembug Warga Rencana Jalan Dusun IV
+                    </h3>
+
+                    <span>
+                        19.30 WIB · Balai Desa Sampetan
+                    </span>
+
+                </div>
+
+                <span class="agenda-tag">
+                    Wajib RT/RW
+                </span>
+
+            </div>
+
+
         </div>
-        <span class="agenda-tag">Wajib RT/RW</span>
-      </div>
-      <div class="agenda-item">
-        <div class="agenda-date">AGU<strong>24</strong></div>
-        <div class="agenda-rule"></div>
-        <div class="agenda-body">
-          <h3>Posyandu Balita & Ibu Hamil</h3>
-          <span>08.00 WIB · Pos Kesehatan Dusun II</span>
-        </div>
-        <span class="agenda-tag">Umum</span>
-      </div>
-      <div class="agenda-item">
-        <div class="agenda-date">SEP<strong>02</strong></div>
-        <div class="agenda-rule"></div>
-        <div class="agenda-body">
-          <h3>Kerja Bakti Saluran Irigasi</h3>
-          <span>07.00 WIB · Titik kumpul Lapangan Desa</span>
-        </div>
-        <span class="agenda-tag">Gotong royong</span>
-      </div>
-      <div class="agenda-item">
-        <div class="agenda-date">SEP<strong>10</strong></div>
-        <div class="agenda-rule"></div>
-        <div class="agenda-body">
-          <h3>Pelatihan UMKM: Pengemasan Produk</h3>
-          <span>13.00 WIB · Aula Kantor Desa</span>
-        </div>
-        <span class="agenda-tag">Pendaftaran</span>
-      </div>
-      <div class="agenda-item">
-        <div class="agenda-date">SEP<strong>17</strong></div>
-        <div class="agenda-rule"></div>
-        <div class="agenda-body">
-          <h3>Vaksinasi Ternak Rutin</h3>
-          <span>08.00 WIB · Balai Dusun III</span>
-        </div>
-        <span class="agenda-tag">Kelompok Tani</span>
-      </div>
-      <div class="agenda-item">
-        <div class="agenda-date">SEP<strong>28</strong></div>
-        <div class="agenda-rule"></div>
-        <div class="agenda-body">
-          <h3>Rembug Warga Rencana Jalan Dusun IV</h3>
-          <span>19.30 WIB · Balai Desa Sampetan</span>
-        </div>
-        <span class="agenda-tag">Wajib RT/RW</span>
-      </div>
+
     </div>
-  </div>
+
 </section>
+
+
+<!-- FOOTER -->
 
 <footer id="kontak-footer">
-  <div class="wrap footer-inner">
-    <div class="footer-grid">
-      <div>
-        <h4>Kantor Desa Sampetan</h4>
-        <p>Jl. Raya Sampetan No. 12<br>Kec. Gladagsari, Kab. Boyolali<br>Jawa Tengah 57385 · ± 900 MDPL, lereng selatan Gunung Merbabu</p>
-      </div>
-      <div>
-        <h4>Jam Layanan</h4>
-        <p>Senin–Kamis: 08.00–15.00<br>Jumat: 08.00–11.00<br>Sabtu–Minggu: Tutup</p>
-      </div>
-      <div>
-        <h4>Kontak</h4>
-        <p><a href="tel:+622212345678">(022) 1234 5678</a><br><a href="mailto:desa@sampetan.go.id">desa@sampetan.go.id</a></p>
-      </div>
+
+    <div class="wrap footer-inner">
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <h4>
+                    Kantor Desa Sampetan
+                </h4>
+
+                <p>
+                    Jl. Raya Sampetan No. 12<br>
+                    Kec. Gladagsari, Kab. Boyolali<br>
+                    Jawa Tengah 57385 · ± 900 MDPL,
+                    lereng selatan Gunung Merbabu
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Jam Layanan
+                </h4>
+
+                <p>
+                    Senin–Kamis: 08.00–15.00<br>
+                    Jumat: 08.00–11.00<br>
+                    Sabtu–Minggu: Tutup
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Kontak
+                </h4>
+
+                <p>
+
+                    <a href="tel:+622212345678">
+                        (022) 1234 5678
+                    </a>
+
+                    <br>
+
+                    <a href="mailto:desa@sampetan.go.id">
+                        desa@sampetan.go.id
+                    </a>
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 Pemerintah Desa Sampetan.
+            Seluruh hak dilindungi.
+
+        </div>
+
     </div>
-    <div class="footer-bottom">© 2026 Pemerintah Desa Sampetan. Seluruh hak dilindungi.</div>
-  </div>
+
 </footer>
+
 
 </body>
 </html>
