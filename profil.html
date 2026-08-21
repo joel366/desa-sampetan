@@ -3,109 +3,400 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Profil Desa — Desa Sampetan</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
 
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
   <nav class="nav">
+
+    <!-- LOGO / BRAND -->
     <a href="index.html" class="brand" style="text-decoration:none;">
+
       <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
-  <path d="M20 4 L34 16 V34 H6 V16 Z" fill="#33502E"/>
-  <path d="M20 4 L34 16 H6 Z" fill="#9C5A34"/>
-  <rect x="16" y="22" width="8" height="12" fill="#F8F7EF"/>
-</svg>
-      <span>Desa Sampetan<span class="brand-sub">± 900 MDPL · Kaki Gunung Merbabu</span></span>
+        <path d="M20 4 L34 16 V34 H6 V16 Z" fill="#33502E"/>
+        <path d="M20 4 L34 16 H6 Z" fill="#9C5A34"/>
+        <rect x="16" y="22" width="8" height="12" fill="#F8F7EF"/>
+      </svg>
+
+      <span>
+        Desa Sampetan
+        <span class="brand-sub">
+          ± 900 MDPL · Kaki Gunung Merbabu
+        </span>
+      </span>
+
     </a>
+
+
+    <!-- NAVIGASI -->
     <ul class="navlinks">
-      <li><a href="index.html"><span class="pos-tag"></span>Beranda</a></li>
-      <li><a href="profil.html" class="active"><span class="pos-tag"></span>Profil Desa</a></li>
-      <li><a href="layanan.html"><span class="pos-tag"></span>Layanan</a></li>
-      <li><a href="agenda.html"><span class="pos-tag"></span>Agenda</a></li>
-      <li><a href="pengumuman.html"><span class="pos-tag"></span>Pengumuman</a></li>
-      <li><a href="kontak.html"><span class="pos-tag"></span>Kontak</a></li>
+
+      <li>
+        <a href="index.html">
+          <span class="pos-tag"></span>
+          Beranda
+        </a>
+      </li>
+
+      <li>
+        <a href="profil.html" class="active">
+          <span class="pos-tag"></span>
+          Profil Desa
+        </a>
+      </li>
+
+      <li>
+        <a href="layanan.html">
+          <span class="pos-tag"></span>
+          Layanan
+        </a>
+      </li>
+
+      <li>
+        <a href="agenda.html">
+          <span class="pos-tag"></span>
+          Agenda
+        </a>
+      </li>
+
+      <li>
+        <a href="pengumuman.html">
+          <span class="pos-tag"></span>
+          Pengumuman
+        </a>
+      </li>
+
+      <li>
+        <a href="kontak.html">
+          <span class="pos-tag"></span>
+          Kontak
+        </a>
+      </li>
+
     </ul>
-    <button class="navtoggle" aria-label="Buka menu">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+
+
+    <!-- TOMBOL MENU MOBILE -->
+    <button
+      class="navtoggle"
+      type="button"
+      aria-label="Buka menu"
+      aria-expanded="false"
+    >
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+      >
+        <path d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
     </button>
+
   </nav>
 </header>
 
+
+<!-- ================= HERO ================= -->
 <section class="page-hero">
+
   <div class="wrap">
-    <p class="eyebrow"> · Profil Desa</p>
-    <h1>Sampetan, desa di lereng selatan Merbabu</h1>
-    <p>Mengenal geografi, penduduk, dan struktur pemerintahan Desa Sampetan.</p>
+
+    <p class="eyebrow">
+      · Profil Desa
+    </p>
+
+    <h1>
+      Sampetan, desa di lereng selatan Merbabu
+    </h1>
+
+    <p>
+      Mengenal geografi, penduduk, dan struktur pemerintahan Desa Sampetan.
+    </p>
+
   </div>
+
 </section>
 
+
+<!-- ================= KONTUR ================= -->
 <div class="kontur on-dark" aria-hidden="true">
-  <svg viewBox="0 0 1200 52" preserveAspectRatio="none">
-    <path d="M0 10 C150 28 350 -4 520 14 C700 32 900 2 1200 18" fill="none" stroke="%23DCD5BE" stroke-width="1.4" opacity="0.35"/>
-    <path d="M0 26 C180 8 360 40 560 24 C760 8 980 36 1200 22" fill="none" stroke="%23DCD5BE" stroke-width="1.4" opacity="0.5"/>
-    <path d="M0 40 C200 24 420 48 620 32 C820 16 1020 44 1200 34" fill="none" stroke="%23DCD5BE" stroke-width="1.4" opacity="0.7"/>
+
+  <svg
+    viewBox="0 0 1200 52"
+    preserveAspectRatio="none"
+  >
+
+    <path
+      d="M0 10 C150 28 350 -4 520 14 C700 32 900 2 1200 18"
+      fill="none"
+      stroke="#DCD5BE"
+      stroke-width="1.4"
+      opacity="0.35"
+    />
+
+    <path
+      d="M0 26 C180 8 360 40 560 24 C760 8 980 36 1200 22"
+      fill="none"
+      stroke="#DCD5BE"
+      stroke-width="1.4"
+      opacity="0.5"
+    />
+
+    <path
+      d="M0 40 C200 24 420 48 620 32 C820 16 1020 44 1200 34"
+      fill="none"
+      stroke="#DCD5BE"
+      stroke-width="1.4"
+      opacity="0.7"
+    />
+
   </svg>
+
 </div>
 
+
+<!-- ================= KONTEN PROFIL ================= -->
 <section>
+
   <div class="wrap profil-grid">
+
+
+    <!-- ================= TENTANG DESA ================= -->
     <div>
-      <h2 style="font-size:1.5rem; margin-bottom:16px;">Tentang Desa</h2>
-      <p>Desa Sampetan terletak di Kecamatan Gladagsari, Kabupaten Boyolali, Jawa Tengah, pada ketinggian sekitar 900 meter di atas permukaan laut di kaki selatan Gunung Merbabu. Udara sejuk dan tanah vulkanik yang subur menjadikan pertanian sayur dan tembakau sebagai mata pencaharian utama warga.</p>
-      <p>Wilayah desa terbagi menjadi empat dusun yang tersebar mengikuti kontur lereng, dihubungkan oleh jalan desa yang sebagian masih menanjak khas daerah pegunungan. Sumber air bersih desa berasal dari mata air lereng Merbabu yang dikelola secara swadaya oleh warga.</p>
-      <h2 style="font-size:1.5rem; margin:28px 0 16px;">Struktur Perangkat Desa</h2>
+
+      <h2 style="font-size:1.5rem; margin-bottom:16px;">
+        Tentang Desa
+      </h2>
+
+      <p>
+        Desa Sampetan terletak di Kecamatan Gladagsari,
+        Kabupaten Boyolali, Jawa Tengah, pada ketinggian
+        sekitar 900 meter di atas permukaan laut di kaki
+        selatan Gunung Merbabu. Udara sejuk dan tanah
+        vulkanik yang subur menjadikan pertanian sayur
+        dan tembakau sebagai mata pencaharian utama warga.
+      </p>
+
+      <p>
+        Wilayah desa terbagi menjadi empat dusun yang
+        tersebar mengikuti kontur lereng, dihubungkan
+        oleh jalan desa yang sebagian masih menanjak khas
+        daerah pegunungan. Sumber air bersih desa berasal
+        dari mata air lereng Merbabu yang dikelola secara
+        swadaya oleh warga.
+      </p>
+
+
+      <!-- ================= STRUKTUR PERANGKAT ================= -->
+      <h2 style="font-size:1.5rem; margin:28px 0 16px;">
+        Struktur Perangkat Desa
+      </h2>
+
       <div class="struktur-list">
-        <div class="struktur-item"><span>Kepala Desa</span><span class="jabatan">Pimpinan pemerintah desa</span></div>
-        <div class="struktur-item"><span>Sekretaris Desa</span><span class="jabatan">Administrasi & tata usaha</span></div>
-        <div class="struktur-item"><span>Kasi Pemerintahan</span><span class="jabatan">Kependudukan & pertanahan</span></div>
-        <div class="struktur-item"><span>Kasi Kesejahteraan</span><span class="jabatan">Bantuan sosial & kesehatan</span></div>
-        <div class="struktur-item"><span>Kasi Pelayanan</span><span class="jabatan">Surat keterangan & perizinan</span></div>
-        <div class="struktur-item"><span>Kepala Dusun I–IV</span><span class="jabatan">Koordinasi wilayah dusun</span></div>
+
+        <div class="struktur-item">
+          <span>Kepala Desa</span>
+          <span class="jabatan">
+            Pimpinan pemerintah desa
+          </span>
+        </div>
+
+        <div class="struktur-item">
+          <span>Sekretaris Desa</span>
+          <span class="jabatan">
+            Administrasi & tata usaha
+          </span>
+        </div>
+
+        <div class="struktur-item">
+          <span>Kasi Pemerintahan</span>
+          <span class="jabatan">
+            Kependudukan & pertanahan
+          </span>
+        </div>
+
+        <div class="struktur-item">
+          <span>Kasi Kesejahteraan</span>
+          <span class="jabatan">
+            Bantuan sosial & kesehatan
+          </span>
+        </div>
+
+        <div class="struktur-item">
+          <span>Kasi Pelayanan</span>
+          <span class="jabatan">
+            Surat keterangan & perizinan
+          </span>
+        </div>
+
+        <div class="struktur-item">
+          <span>Kepala Dusun I–IV</span>
+          <span class="jabatan">
+            Koordinasi wilayah dusun
+          </span>
+        </div>
+
       </div>
+
     </div>
+
+
+    <!-- ================= STATISTIK ================= -->
     <div>
+
       <div class="stat-list">
-        <div class="stat"><strong>4</strong><span>Dusun</span></div>
-        <div class="stat"><strong>± 900 m</strong><span>Ketinggian (MDPL)</span></div>
-        <div class="stat"><strong>12</strong><span>RT / 4 RW</span></div>
-        <div class="stat"><strong>1826</strong><span>Tahun berdiri desa</span></div>
+
+        <div class="stat">
+          <strong>4</strong>
+          <span>Dusun</span>
+        </div>
+
+        <div class="stat">
+          <strong>± 900 m</strong>
+          <span>Ketinggian (MDPL)</span>
+        </div>
+
+        <div class="stat">
+          <strong>12</strong>
+          <span>RT / 4 RW</span>
+        </div>
+
+        <div class="stat">
+          <strong>1826</strong>
+          <span>Tahun berdiri desa</span>
+        </div>
+
       </div>
+
+
+      <!-- ================= BATAS WILAYAH ================= -->
       <div class="tick-card" style="margin-top:8px;">
-        <p class="pos-tag" style="margin-bottom:8px;">Batas Wilayah</p>
-        <p style="font-size:0.92rem; color:var(--ink-soft); line-height:1.9;">
-          Utara — Lereng Gunung Merbabu (kawasan hutan lindung)<br>
+
+        <p
+          class="pos-tag"
+          style="margin-bottom:8px;"
+        >
+          Batas Wilayah
+        </p>
+
+        <p
+          style="
+            font-size:0.92rem;
+            color:var(--ink-soft);
+            line-height:1.9;
+          "
+        >
+          Utara — Lereng Gunung Merbabu
+          (kawasan hutan lindung)<br>
+
           Selatan — Desa Gladagsari<br>
+
           Timur — Desa Ngagrong<br>
+
           Barat — Desa Sruni
         </p>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
 
+
+<!-- ================= FOOTER ================= -->
 <footer id="kontak-footer">
+
   <div class="wrap footer-inner">
+
     <div class="footer-grid">
+
+
+      <!-- ALAMAT -->
       <div>
-        <h4>Kantor Desa Sampetan</h4>
-        <p>Jl. Raya Sampetan No. 12<br>Kec. Gladagsari, Kab. Boyolali<br>Jawa Tengah 57385 · ± 900 MDPL, lereng selatan Gunung Merbabu</p>
+
+        <h4>
+          Kantor Desa Sampetan
+        </h4>
+
+        <p>
+          Jl. Raya Sampetan No. 12<br>
+          Kec. Gladagsari, Kab. Boyolali<br>
+          Jawa Tengah 57385 · ± 900 MDPL,
+          lereng selatan Gunung Merbabu
+        </p>
+
       </div>
+
+
+      <!-- JAM LAYANAN -->
       <div>
-        <h4>Jam Layanan</h4>
-        <p>Senin–Kamis: 08.00–15.00<br>Jumat: 08.00–11.00<br>Sabtu–Minggu: Tutup</p>
+
+        <h4>
+          Jam Layanan
+        </h4>
+
+        <p>
+          Senin–Kamis: 08.00–15.00<br>
+          Jumat: 08.00–11.00<br>
+          Sabtu–Minggu: Tutup
+        </p>
+
       </div>
+
+
+      <!-- KONTAK -->
       <div>
-        <h4>Kontak</h4>
-        <p><a href="tel:+622212345678">(022) 1234 5678</a><br><a href="mailto:desa@sampetan.go.id">desa@sampetan.go.id</a></p>
+
+        <h4>
+          Kontak
+        </h4>
+
+        <p>
+
+          <a href="tel:+622212345678">
+            (022) 1234 5678
+          </a>
+
+          <br>
+
+          <a href="mailto:desa@sampetan.go.id">
+            desa@sampetan.go.id
+          </a>
+
+        </p>
+
       </div>
+
     </div>
-    <div class="footer-bottom">© 2026 Pemerintah Desa Sampetan. Seluruh hak dilindungi.</div>
+
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      © 2026 Pemerintah Desa Sampetan.
+      Seluruh hak dilindungi.
+    </div>
+
   </div>
+
 </footer>
+
+
+<!-- ================= JAVASCRIPT NAVIGASI ================= -->
+<script src="nav.js"></script>
 
 </body>
 </html>
