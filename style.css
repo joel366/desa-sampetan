@@ -486,3 +486,55 @@ footer a:hover{ color: var(--mist); }
     }
 
 }
+
+/* =========================
+   MOBILE NAVIGATION FIX
+========================= */
+
+@media (max-width: 768px) {
+
+  .nav {
+    position: relative;
+  }
+
+  .navlinks {
+    display: none;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+    gap: 0;
+
+    padding: 14px 20px;
+
+    background: var(--paper);
+
+    border-top: 1px solid var(--line);
+    box-shadow: 0 12px 30px rgba(0,0,0,.08);
+
+    z-index: 9999;
+  }
+
+  .navlinks.open {
+    display: flex;
+  }
+
+  .navlinks li {
+    width: 100%;
+  }
+
+  .navlinks a {
+    display: block;
+    width: 100%;
+    padding: 13px 8px;
+  }
+
+  .navtoggle {
+    display: flex;
+    cursor: pointer;
+    z-index: 10000;
+  }
+
+}
