@@ -2,135 +2,331 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Kontak — Desa Sampetan</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<title>Kontak — Desa Sampetan</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- JavaScript Navbar -->
-    <script src="nav.js" defer></script>
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+
 <header>
 
-    <nav class="nav">
+<nav class="nav">
 
-        <!-- BRAND -->
+<a href="index.html" class="brand">
 
-        <a href="index.html" class="brand" style="text-decoration:none;">
+<svg class="brand-mark" viewBox="0 0 40 40" fill="none">
+<path d="M20 4 L34 16 V34 H6 V16 Z" fill="#33502E"/>
+<path d="M20 4 L34 16 H6 Z" fill="#9C5A34"/>
+<rect x="16" y="22" width="8" height="12" fill="#F8F7EF"/>
+</svg>
 
-            <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
+<span>
+Desa Sampetan
 
-                <path
-                    d="M20 4 L34 16 V34 H6 V16 Z"
-                    fill="#33502E"/>
+<span class="brand-sub">
+± 900 MDPL · Kaki Gunung Merbabu
+</span>
 
-                <path
-                    d="M20 4 L34 16 H6 Z"
-                    fill="#9C5A34"/>
+</span>
 
-                <rect
-                    x="16"
-                    y="22"
-                    width="8"
-                    height="12"
-                    fill="#F8F7EF"/>
-
-            </svg>
-
-            <span>
-                Desa Sampetan
-
-                <span class="brand-sub">
-                    ± 900 MDPL · Kaki Gunung Merbabu
-                </span>
-
-            </span>
-
-        </a>
+</a>
 
 
-        <!-- NAVIGATION -->
+<ul class="navlinks" id="menu-navigasi">
 
-        <ul class="navlinks">
+<li>
+<a href="index.html">
+<span class="pos-tag">01</span>
+Beranda
+</a>
+</li>
 
-            <li>
-                <a href="index.html">
-                    <span class="pos-tag"></span>
-                    Beranda
-                </a>
-            </li>
+<li>
+<a href="profil.html">
+<span class="pos-tag">02</span>
+Profil Desa
+</a>
+</li>
 
-            <li>
-                <a href="profil.html">
-                    <span class="pos-tag"></span>
-                    Profil Desa
-                </a>
-            </li>
+<li>
+<a href="layanan.html">
+<span class="pos-tag">03</span>
+Layanan
+</a>
+</li>
 
-            <li>
-                <a href="layanan.html">
-                    <span class="pos-tag"></span>
-                    Layanan
-                </a>
-            </li>
+<li>
+<a href="agenda.html">
+<span class="pos-tag">04</span>
+Agenda
+</a>
+</li>
 
-            <li>
-                <a href="agenda.html">
-                    <span class="pos-tag"></span>
-                    Agenda
-                </a>
-            </li>
+<li>
+<a href="pengumuman.html">
+<span class="pos-tag">05</span>
+Pengumuman
+</a>
+</li>
 
-            <li>
-                <a href="pengumuman.html">
-                    <span class="pos-tag"></span>
-                    Pengumuman
-                </a>
-            </li>
+<li>
+<a href="kontak.html" class="active">
+<span class="pos-tag">06</span>
+Kontak
+</a>
+</li>
 
-            <li>
-                <a href="kontak.html" class="active">
-                    <span class="pos-tag"></span>
-                    Kontak
-                </a>
-            </li>
-
-        </ul>
+</ul>
 
 
-        <!-- HAMBURGER MENU -->
+<button
+class="navtoggle"
+type="button"
+aria-label="Buka menu navigasi"
+aria-expanded="false"
+aria-controls="menu-navigasi">
 
-        <button
-            class="navtoggle"
-            id="navToggle"
-            aria-label="Buka menu"
-            aria-expanded="false"
-            type="button">
+<svg
+width="22"
+height="22"
+viewBox="0 0 24 24"
+fill="none"
+stroke="currentColor"
+stroke-width="1.6">
 
-            <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6">
+<path d="M3 6h18"/>
+<path d="M3 12h18"/>
+<path d="M3 18h18"/>
 
-                <path d="M3 6h18M3 12h18M3 18h18"/>
+</svg>
 
-            </svg>
+</button>
 
-        </button>
-
-    </nav>
+</nav>
 
 </header>
+
+
+<section class="page-hero">
+
+<div class="wrap">
+
+<p class="eyebrow">
+· Kontak Desa
+</p>
+
+<h1>
+Hubungi Pemerintah Desa Sampetan
+</h1>
+
+<p>
+Informasi alamat, jam pelayanan, dan kontak kantor desa.
+</p>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="wrap">
+
+<div class="kontak-grid">
+
+
+<div class="kontak-card">
+
+<h3>
+Alamat Kantor Desa
+</h3>
+
+<p>
+
+Jl. Raya Sampetan No. 12<br>
+
+Kecamatan Gladagsari<br>
+
+Kabupaten Boyolali<br>
+
+Jawa Tengah 57385
+
+</p>
+
+</div>
+
+
+<div class="kontak-card">
+
+<h3>
+Jam Pelayanan
+</h3>
+
+<p>
+
+Senin–Kamis<br>
+08.00–15.00 WIB
+
+<br><br>
+
+Jumat<br>
+08.00–11.00 WIB
+
+<br><br>
+
+Sabtu–Minggu<br>
+Tutup
+
+</p>
+
+</div>
+
+
+<div class="kontak-card">
+
+<h3>
+Telepon
+</h3>
+
+<p>
+
+<a href="tel:+622212345678">
+(022) 1234 5678
+</a>
+
+</p>
+
+</div>
+
+
+<div class="kontak-card">
+
+<h3>
+Email
+</h3>
+
+<p>
+
+<a href="mailto:desa@sampetan.go.id">
+desa@sampetan.go.id
+</a>
+
+</p>
+
+</div>
+
+
+</div>
+
+
+<div style="margin-top:32px;">
+
+<div class="map-frame">
+
+<iframe
+src="https://www.google.com/maps?q=Desa%20Sampetan%20Boyolali&output=embed"
+loading="lazy"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="wrap footer-inner">
+
+<div class="footer-grid">
+
+<div>
+
+<h4>
+Kantor Desa Sampetan
+</h4>
+
+<p>
+
+Jl. Raya Sampetan No. 12<br>
+Kec. Gladagsari, Kab. Boyolali<br>
+Jawa Tengah 57385
+
+</p>
+
+</div>
+
+
+<div>
+
+<h4>
+Jam Layanan
+</h4>
+
+<p>
+
+Senin–Kamis: 08.00–15.00<br>
+Jumat: 08.00–11.00<br>
+Sabtu–Minggu: Tutup
+
+</p>
+
+</div>
+
+
+<div>
+
+<h4>
+Kontak
+</h4>
+
+<p>
+
+<a href="tel:+622212345678">
+(022) 1234 5678
+</a>
+
+<br>
+
+<a href="mailto:desa@sampetan.go.id">
+desa@sampetan.go.id
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+© 2026 Pemerintah Desa Sampetan.
+Seluruh hak dilindungi.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
