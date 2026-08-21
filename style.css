@@ -1,0 +1,438 @@
+/* =========================================================
+   Desa Sampetan — sistem desain "Kaki Gunung Merbabu"
+   Palet: kabut lereng, hutan pinus, tanah vulkanik.
+   Motif tanda tangan: garis kontur topografi + penanda jalur (waypoint).
+   ========================================================= */
+
+:root{
+  /* --- Warna --- */
+  --mist:        #EDF0E1;   /* latar utama — kabut lereng pagi */
+  --paper:       #F8F7EF;   /* kartu / permukaan terang */
+  --ink:         #202B1D;   /* teks utama — pinus gelap */
+  --ink-soft:    #55624B;
+  --pine-deep:   #16231A;   /* header gelap / footer */
+  --pine:        #33502E;   /* aksen struktural */
+  --fern:        #6E8B5C;   /* aksen sekunder — pakis */
+  --clay:        #9C5A34;   /* aksen utama — tanah vulkanik */
+  --clay-soft:   #C98A5E;
+  --stone:       #DCD5BE;   /* garis / border */
+  --stone-line:  rgba(32,43,29,0.14);
+  --radius: 3px;
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background: var(--mist);
+  color: var(--ink);
+  font-family:'Work Sans', sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  color: var(--ink);
+  letter-spacing:-0.01em;
+}
+a{color:inherit;}
+img,svg{display:block; max-width:100%;}
+.wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
+:focus-visible{outline:2px solid var(--clay); outline-offset:3px;}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+}
+
+.eyebrow{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color: var(--clay);
+}
+
+/* ===================== WAYPOINT NUMBERING =====================
+   Setiap halaman = satu "pos" di jalur pendakian menuju kantor desa.
+   Nomor pos dipakai di nav (bukan dekorasi — mengikuti urutan menu). */
+.pos-tag{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.68rem;
+  letter-spacing:0.08em;
+  color: var(--fern);
+}
+
+/* ===================== HEADER ===================== */
+header{
+  position:sticky; top:0; z-index:50;
+  background: var(--mist);
+  border-bottom:1px solid var(--stone-line);
+}
+.nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 32px;
+  max-width:1120px; margin:0 auto;
+}
+.brand{
+  display:flex; align-items:center; gap:10px;
+  font-family:'Fraunces', serif; font-weight:700; font-size:1.02rem;
+}
+.brand-mark{ width:32px; height:32px; flex-shrink:0; }
+.brand-sub{
+  display:block;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase;
+  color: var(--fern); font-weight:400; margin-top:1px;
+}
+
+.navlinks{ display:flex; gap:2px; list-style:none; }
+.navlinks a{
+  position:relative;
+  display:flex; flex-direction:column; gap:1px;
+  font-size:0.86rem; text-decoration:none; color:var(--ink-soft);
+  padding:8px 14px;
+  border-radius: var(--radius);
+  transition: background .2s, color .2s;
+}
+.navlinks a .pos-tag{ font-size:0.6rem; opacity:0.75; }
+.navlinks a:hover{ background: var(--paper); color: var(--pine-deep); }
+.navlinks a.active{ background: var(--pine-deep); color: var(--mist); }
+.navlinks a.active .pos-tag{ color: var(--clay-soft); opacity:1; }
+
+.navtoggle{ display:none; background:none; border:none; cursor:pointer; }
+@media (max-width:900px){
+  .navlinks{ display:none; }
+  .navtoggle{ display:block; }
+}
+
+/* ===================== PAGE HERO (halaman non-beranda) ===================== */
+.page-hero{
+  background: var(--pine-deep);
+  color: var(--mist);
+  padding: 64px 0 40px;
+}
+.page-hero .eyebrow{ color: var(--clay-soft); }
+.page-hero h1{
+  color: var(--mist);
+  font-size:clamp(2rem, 4.4vw, 3rem);
+  margin-top:10px;
+  max-width:16ch;
+}
+.page-hero p{
+  margin-top:14px;
+  max-width:56ch;
+  color: rgba(237,240,225,0.78);
+  font-size:1.02rem;
+}
+
+/* ===================== KONTUR — pemisah bagian bertopografi =====================
+   Garis kontur = elevasi nyata lereng Merbabu, dipakai sebagai pemisah
+   antar bagian alih-alih garis lurus generik. */
+.kontur{
+  height:52px;
+  overflow:hidden;
+  line-height:0;
+}
+.kontur svg{ width:100%; height:100%; }
+.kontur.on-dark{ background: var(--pine-deep); }
+.kontur.on-light{ background: var(--mist); }
+
+/* ===================== HOME HERO ===================== */
+.hero{
+  position:relative;
+  overflow:hidden;
+  background-image:
+    linear-gradient(180deg, rgba(15,20,13,0.32) 0%, rgba(15,20,13,0.5) 55%, rgba(12,17,11,0.78) 100%),
+    url('https://images.pexels.com/photos/36665312/pexels-photo-36665312.jpeg?auto=compress&cs=tinysrgb&w=1920');
+  background-size:cover;
+  background-position:center 62%;
+  min-height:560px;
+  display:flex; align-items:center;
+}
+.hero-inner{
+  position:relative; z-index:2;
+  max-width:1120px; margin:0 auto;
+  padding:100px 32px 88px;
+  width:100%;
+}
+.elev-badge{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.72rem; letter-spacing:0.08em;
+  color:#EDF0E1;
+  background: rgba(237,240,225,0.12);
+  border:1px solid rgba(237,240,225,0.35);
+  padding:6px 12px;
+  border-radius:999px;
+  margin-bottom:20px;
+}
+.elev-badge svg{ width:13px; height:13px; }
+.hero-eyebrow{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.75rem; letter-spacing:0.16em; text-transform:uppercase;
+  color:#EDF0E1; opacity:0.82;
+}
+.hero h1{
+  font-size:clamp(2.5rem, 6.2vw, 4.4rem);
+  color:#F8F7EF;
+  margin-top:14px;
+  max-width:12ch;
+  text-shadow:0 2px 24px rgba(0,0,0,0.3);
+}
+.hero p{
+  margin-top:18px;
+  max-width:46ch;
+  font-size:1.05rem;
+  color:#EDF0E1;
+  opacity:0.9;
+}
+.hero-links{
+  margin-top:32px;
+  display:flex; gap:12px; flex-wrap:wrap;
+}
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.76rem; letter-spacing:0.04em; text-transform:uppercase;
+  text-decoration:none;
+  padding:12px 20px;
+  border-radius:999px;
+  border:1px solid transparent;
+  transition: background .2s, color .2s, border-color .2s;
+}
+.btn-solid{ background: var(--clay); color:#F8F7EF; }
+.btn-solid:hover{ background:#84492A; }
+.btn-outline{ border-color: rgba(237,240,225,0.5); color:#F8F7EF; }
+.btn-outline:hover{ background: rgba(237,240,225,0.12); }
+
+/* ===================== SECTIONS umum ===================== */
+section{ padding:80px 0; }
+.section-head{ max-width:640px; margin-bottom:44px; }
+.section-head h2{ font-size:clamp(1.7rem, 3.4vw, 2.3rem); margin-top:10px; }
+.section-head p{ margin-top:12px; color:var(--ink-soft); font-size:1rem; }
+.section-head.on-dark h2{ color: var(--mist); }
+.section-head.on-dark p{ color: rgba(237,240,225,0.72); }
+.section-head.on-dark .eyebrow{ color: var(--clay-soft); }
+
+/* ===================== KARTU DENGAN "WAYPOINT TICK" =====================
+   Notch di sudut kartu — merujuk pada patok jalur pendakian bernomor. */
+.tick-card{
+  position:relative;
+  background: var(--paper);
+  border:1px solid var(--stone-line);
+  padding:30px 26px;
+}
+.tick-card::before{
+  content:"";
+  position:absolute; top:0; left:0;
+  width:0; height:0;
+  border-style:solid;
+  border-width:16px 16px 0 0;
+  border-color: var(--clay) transparent transparent transparent;
+}
+
+/* ===================== GRID LAYANAN (dipakai di beranda & layanan.html) ===================== */
+.layanan-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background: var(--stone-line);
+  border:1px solid var(--stone-line);
+}
+.layanan-card{
+  background: var(--paper);
+  padding:32px 28px;
+  display:flex; flex-direction:column; gap:14px;
+  transition: background .25s;
+}
+.layanan-card:hover{ background:#F1EEDF; }
+.layanan-card .pos-tag{ order:-1; }
+.layanan-icon{ width:40px; height:40px; color: var(--pine); }
+.layanan-card h3{ font-size:1.06rem; }
+.layanan-card p{ font-size:0.92rem; color:var(--ink-soft); flex-grow:1; }
+.layanan-card .cta{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.75rem; letter-spacing:0.04em; text-transform:uppercase;
+  text-decoration:none;
+  color: var(--clay);
+  display:inline-flex; align-items:center; gap:6px;
+  width:fit-content;
+  border-bottom:1px solid var(--clay);
+  padding-bottom:2px;
+}
+@media (max-width:860px){ .layanan-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width:560px){ .layanan-grid{ grid-template-columns:1fr; } }
+
+/* ===================== AGENDA ===================== */
+.agenda-band{ background: var(--pine-deep); color: var(--mist); }
+.agenda-list{ border-top:1px solid rgba(237,240,225,0.16); }
+.agenda-item{
+  display:grid;
+  grid-template-columns:120px 1px 1fr auto;
+  gap:28px;
+  align-items:center;
+  padding:26px 0;
+  border-bottom:1px solid rgba(237,240,225,0.16);
+}
+.agenda-date{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.85rem;
+  color: var(--clay-soft);
+  line-height:1.4;
+}
+.agenda-date strong{ display:block; font-size:1.6rem; color:var(--mist); font-family:'Fraunces',serif; font-weight:600; }
+.agenda-rule{ background: rgba(237,240,225,0.18); height:44px; width:1px; }
+.agenda-body h3{ color:var(--mist); font-size:1.08rem; }
+.agenda-body span{ display:block; margin-top:6px; font-size:0.86rem; color: rgba(237,240,225,0.65); }
+.agenda-tag{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase;
+  border:1px solid rgba(237,240,225,0.35);
+  border-radius:999px;
+  padding:6px 14px;
+  color: var(--mist);
+  white-space:nowrap;
+}
+@media (max-width:700px){
+  .agenda-item{ grid-template-columns:90px 1px 1fr; }
+  .agenda-tag{ grid-column:1 / -1; width:fit-content; margin-top:4px; }
+}
+
+/* ===================== PAPAN PENGUMUMAN ===================== */
+.papan{ background:#F1EEDF; border:1px solid var(--stone-line); padding:8px; }
+.papan-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+.note{
+  position:relative;
+  background: var(--paper);
+  border:1px solid var(--stone-line);
+  padding:26px 22px 22px;
+}
+.note::before{
+  content:"";
+  position:absolute; top:0; left:0;
+  width:0; height:0;
+  border-style:solid; border-width:14px 14px 0 0;
+  border-color: var(--fern) transparent transparent transparent;
+}
+.note.penting::before{ border-color: var(--clay) transparent transparent transparent; }
+.note-tag{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase;
+  color: var(--fern);
+}
+.note.penting .note-tag{ color: var(--clay); }
+.note h3{ font-size:1rem; margin-top:10px; }
+.note p{ font-size:0.88rem; color:var(--ink-soft); margin-top:8px; }
+.note time{
+  display:block; margin-top:16px;
+  font-family:'IBM Plex Mono', monospace; font-size:0.74rem;
+  color:var(--ink-soft); opacity:0.7;
+}
+@media (max-width:860px){ .papan-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width:560px){ .papan-grid{ grid-template-columns:1fr; } }
+
+/* ===================== PROFIL DESA ===================== */
+.profil-grid{
+  display:grid; grid-template-columns: 1.1fr 0.9fr; gap:56px;
+  align-items:start;
+}
+.profil-grid p + p{ margin-top:14px; }
+.profil-grid p{ color: var(--ink-soft); }
+.stat-list{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--stone-line); border:1px solid var(--stone-line); }
+.stat{ background:var(--paper); padding:22px 20px; }
+.stat strong{ display:block; font-family:'Fraunces',serif; font-size:1.7rem; color:var(--pine-deep); }
+.stat span{ font-family:'IBM Plex Mono', monospace; font-size:0.68rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft); }
+@media (max-width:860px){ .profil-grid{ grid-template-columns:1fr; } }
+
+.struktur-list{ border-top:1px solid var(--stone-line); margin-top:8px; }
+.struktur-item{
+  display:flex; justify-content:space-between; gap:20px;
+  padding:16px 0; border-bottom:1px solid var(--stone-line);
+  font-size:0.94rem;
+}
+.struktur-item .jabatan{ color:var(--ink-soft); font-family:'IBM Plex Mono', monospace; font-size:0.78rem; }
+
+/* ===================== DETAIL LAYANAN ===================== */
+.detail-grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:56px;
+  align-items:start;
+}
+.detail-grid h2{ font-size:1.3rem; margin-bottom:18px; }
+
+.syarat-list{ border-top:1px solid var(--stone-line); }
+.syarat-item{
+  display:flex; gap:12px; align-items:flex-start;
+  padding:14px 0; border-bottom:1px solid var(--stone-line);
+  font-size:0.94rem; color:var(--ink-soft);
+}
+.syarat-item svg{ flex:none; width:16px; height:16px; margin-top:3px; color:var(--fern); }
+
+/* alur pengajuan digambarkan sebagai jalur bernomor — konsisten dengan
+   motif "pos" pada navigasi situs */
+.langkah-list{ position:relative; margin-top:4px; }
+.langkah-item{ display:flex; gap:16px; padding-bottom:26px; position:relative; }
+.langkah-item:last-child{ padding-bottom:0; }
+.langkah-item:not(:last-child)::before{
+  content:""; position:absolute; left:17px; top:34px; bottom:0; width:1px;
+  background: var(--stone-line);
+}
+.langkah-num{
+  flex:none; width:34px; height:34px; border-radius:50%;
+  border:1.5px solid var(--clay); background:var(--paper);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'IBM Plex Mono', monospace; font-size:0.78rem; color:var(--clay);
+  position:relative; z-index:1;
+}
+.langkah-text h3{ font-size:0.98rem; margin-bottom:3px; }
+.langkah-text p{ font-size:0.88rem; color:var(--ink-soft); }
+
+.dokumen-box{
+  margin-top:32px;
+  background: var(--paper);
+  border:1px solid var(--stone-line);
+  padding:24px 26px;
+}
+.dokumen-box .pos-tag{ display:block; margin-bottom:10px; }
+.dokumen-box ul{ list-style:none; }
+.dokumen-box li{
+  font-size:0.92rem; color:var(--ink-soft);
+  padding:8px 0; border-bottom:1px solid var(--stone-line);
+}
+.dokumen-box li:last-child{ border-bottom:none; }
+
+.breadcrumb{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.74rem; letter-spacing:0.04em;
+  color: rgba(237,240,225,0.65);
+  margin-bottom:16px;
+}
+.breadcrumb a{ color: var(--clay-soft); text-decoration:none; }
+.breadcrumb a:hover{ text-decoration:underline; }
+
+@media (max-width:860px){ .detail-grid{ grid-template-columns:1fr; } }
+
+/* ===================== KONTAK ===================== */
+.kontak-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--stone-line); border:1px solid var(--stone-line); }
+.kontak-card{ background:var(--paper); padding:30px 26px; }
+.kontak-card h3{ font-size:1rem; margin-bottom:12px; }
+.kontak-card p, .kontak-card a{ font-size:0.94rem; color:var(--ink-soft); text-decoration:none; line-height:1.9; }
+.kontak-card a:hover{ color:var(--clay); }
+.map-frame{
+  border:1px solid var(--stone-line);
+  aspect-ratio:16/9;
+  background: var(--paper);
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
+}
+.map-frame iframe{ width:100%; height:100%; border:0; }
+@media (max-width:860px){ .kontak-grid{ grid-template-columns:1fr; } }
+
+/* ===================== FOOTER ===================== */
+footer{ background: var(--pine-deep); color: var(--mist); }
+.footer-inner{ padding:52px 0 28px; }
+.footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; }
+footer h4{ font-family:'IBM Plex Mono', monospace; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--clay-soft); margin-bottom:14px;}
+footer p, footer a{ font-size:0.9rem; color:rgba(237,240,225,0.75); text-decoration:none; line-height:1.9; }
+footer a:hover{ color: var(--mist); }
+.footer-bottom{ margin-top:44px; padding-top:20px; border-top:1px solid rgba(237,240,225,0.15); font-size:0.78rem; color:rgba(237,240,225,0.5); }
+@media (max-width:700px){ .footer-grid{ grid-template-columns:1fr; } }

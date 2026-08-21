@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beranda — Desa Sampetan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="index.html" class="brand" style="text-decoration:none;">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
+  <path d="M20 4 L34 16 V34 H6 V16 Z" fill="#33502E"/>
+  <path d="M20 4 L34 16 H6 Z" fill="#9C5A34"/>
+  <rect x="16" y="22" width="8" height="12" fill="#F8F7EF"/>
+</svg>
+      <span>Desa Sampetan<span class="brand-sub">± 900 MDPL · Kaki Gunung Merbabu</span></span>
+    </a>
+    <ul class="navlinks">
+      <li><a href="index.html" class="active"><span class="pos-tag"></span>Beranda</a></li>
+      <li><a href="profil.html"><span class="pos-tag"></span>Profil Desa</a></li>
+      <li><a href="layanan.html"><span class="pos-tag"></span>Layanan</a></li>
+      <li><a href="agenda.html"><span class="pos-tag"></span>Agenda</a></li>
+      <li><a href="pengumuman.html"><span class="pos-tag"></span>Pengumuman</a></li>
+      <li><a href="kontak.html"><span class="pos-tag"></span>Kontak</a></li>
+    </ul>
+    <button class="navtoggle" aria-label="Buka menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </nav>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="elev-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 20l6-11 4 6 3-5 5 10z"/></svg>
+      ± 900 MDPL · Lereng Selatan Gunung Merbabu
+    </div>
+    <p class="hero-eyebrow">Portal Resmi Warga · Kec. Gladagsari, Boyolali</p>
+    <h1>Selamat Datang di Desa Sampetan</h1>
+    <p>Informasi layanan, agenda kegiatan, dan pengumuman resmi desa — diperbarui setiap minggu oleh perangkat desa.</p>
+    <div class="hero-links">
+      <a class="btn btn-solid" href="layanan.html">Lihat Layanan</a>
+      <a class="btn btn-outline" href="pengumuman.html">Papan Pengumuman</a>
+    </div>
+  </div>
+</section>
+
+<div class="kontur on-light" aria-hidden="true">
+  <svg viewBox="0 0 1200 52" preserveAspectRatio="none">
+    <path d="M0 10 C150 28 350 -4 520 14 C700 32 900 2 1200 18" fill="none" stroke="%2316231A" stroke-width="1.4" opacity="0.35"/>
+    <path d="M0 26 C180 8 360 40 560 24 C760 8 980 36 1200 22" fill="none" stroke="%2316231A" stroke-width="1.4" opacity="0.5"/>
+    <path d="M0 40 C200 24 420 48 620 32 C820 16 1020 44 1200 34" fill="none" stroke="%2316231A" stroke-width="1.4" opacity="0.7"/>
+  </svg>
+</div>
+
+<section id="layanan-ringkas">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow"> · Layanan Desa</p>
+      <h2>Urus keperluan administrasi tanpa antre lama</h2>
+      <p>Enam layanan utama, dapat diajukan langsung secara daring.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="layanan-grid">
+      <div class="layanan-card">
+        <span class="pos-tag"></span>
+        <svg class="layanan-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 3h9l5 5v13H5z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>
+        <h3>Surat Keterangan</h3>
+        <p>Domisili, tidak mampu, usaha, dan kelahiran. Terbit dalam 1–2 hari kerja.</p>
+        <a class="cta" href="layanan-surat-keterangan.html">Ajukan surat →</a>
+      </div>
+      <div class="layanan-card">
+        <span class="pos-tag"></span>
+        <svg class="layanan-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="3.2"/><path d="M5 21c0-4 3.2-6.5 7-6.5S19 17 19 21"/></svg>
+        <h3>Kependudukan</h3>
+        <p>Pengurusan KTP, KK, dan pindah domisili melalui perangkat RT/RW.</p>
+        <a class="cta" href="layanan-kependudukan.html">Lihat syarat →</a>
+      </div>
+      <div class="layanan-card">
+        <span class="pos-tag"></span>
+        <svg class="layanan-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 20V10l8-6 8 6v10"/><path d="M9 20v-6h6v6"/></svg>
+        <h3>Bantuan Sosial</h3>
+        <p>Pendaftaran dan pengecekan status penerima program bantuan.</p>
+        <a class="cta" href="layanan-bansos.html">Cek status →</a>
+      </div>
+    </div>
+    <p style="margin-top:24px;"><a class="cta" style="border-bottom:1px solid var(--clay); padding-bottom:2px; font-family:'IBM Plex Mono',monospace; font-size:0.78rem; text-transform:uppercase; color:var(--clay); text-decoration:none;" href="layanan.html">Lihat semua layanan →</a></p>
+  </div>
+</section>
+
+<div class="kontur on-dark" aria-hidden="true">
+  <svg viewBox="0 0 1200 52" preserveAspectRatio="none">
+    <path d="M0 10 C150 28 350 -4 520 14 C700 32 900 2 1200 18" fill="none" stroke="%23DCD5BE" stroke-width="1.4" opacity="0.35"/>
+    <path d="M0 26 C180 8 360 40 560 24 C760 8 980 36 1200 22" fill="none" stroke="%23DCD5BE" stroke-width="1.4" opacity="0.5"/>
+    <path d="M0 40 C200 24 420 48 620 32 C820 16 1020 44 1200 34" fill="none" stroke="%23DCD5BE" stroke-width="1.4" opacity="0.7"/>
+  </svg>
+</div>
+
+<section class="agenda-band" id="agenda-ringkas">
+  <div class="wrap">
+    <div class="section-head on-dark">
+      <p class="eyebrow"> · Agenda Desa</p>
+      <h2>Kegiatan yang akan berlangsung</h2>
+      <p>Sebagian besar kegiatan terbuka untuk seluruh warga.</p>
+    </div>
+    <div class="agenda-list">
+      <div class="agenda-item">
+        <div class="agenda-date">AGU<strong>21</strong></div>
+        <div class="agenda-rule"></div>
+        <div class="agenda-body">
+          <h3>Musyawarah Rencana Pembangunan Desa</h3>
+          <span>09.00 WIB · Balai Desa Sampetan</span>
+        </div>
+        <span class="agenda-tag">Wajib RT/RW</span>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-date">AGU<strong>24</strong></div>
+        <div class="agenda-rule"></div>
+        <div class="agenda-body">
+          <h3>Posyandu Balita & Ibu Hamil</h3>
+          <span>08.00 WIB · Pos Kesehatan Dusun II</span>
+        </div>
+        <span class="agenda-tag">Umum</span>
+      </div>
+    </div>
+    <p style="margin-top:24px;"><a href="agenda.html" style="font-family:'IBM Plex Mono',monospace; font-size:0.78rem; text-transform:uppercase; color:var(--clay-soft); text-decoration:none; border-bottom:1px solid var(--clay-soft); padding-bottom:2px;">Lihat semua agenda →</a></p>
+  </div>
+</section>
+
+<div class="kontur on-light" aria-hidden="true">
+  <svg viewBox="0 0 1200 52" preserveAspectRatio="none">
+    <path d="M0 10 C150 28 350 -4 520 14 C700 32 900 2 1200 18" fill="none" stroke="%2316231A" stroke-width="1.4" opacity="0.35"/>
+    <path d="M0 26 C180 8 360 40 560 24 C760 8 980 36 1200 22" fill="none" stroke="%2316231A" stroke-width="1.4" opacity="0.5"/>
+    <path d="M0 40 C200 24 420 48 620 32 C820 16 1020 44 1200 34" fill="none" stroke="%2316231A" stroke-width="1.4" opacity="0.7"/>
+  </svg>
+</div>
+
+<section id="pengumuman-ringkas">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow"> · Papan Pengumuman</p>
+      <h2>Informasi resmi dari kantor desa</h2>
+      <p>Ditempel dan diperbarui langsung oleh perangkat desa.</p>
+    </div>
+    <div class="papan">
+      <div class="papan-grid">
+        <div class="note penting">
+          <p class="note-tag">Penting</p>
+          <h3>Penutupan Sementara Jembatan Dusun III</h3>
+          <p>Perbaikan struktur berlangsung 19–23 Agustus. Warga diarahkan melalui jalur alternatif Dusun I.</p>
+          <time>18 Agustus 2026</time>
+        </div>
+        <div class="note">
+          <p class="note-tag">Layanan</p>
+          <h3>Jadwal Pelayanan Surat Diperpanjang</h3>
+          <p>Mulai minggu ini, loket surat-menyurat buka hingga pukul 15.00 setiap Senin–Kamis.</p>
+          <time>15 Agustus 2026</time>
+        </div>
+        <div class="note penting">
+          <p class="note-tag">Penting</p>
+          <h3>Batas Akhir Pembayaran PBB</h3>
+          <p>Pembayaran Pajak Bumi dan Bangunan tahun berjalan paling lambat 31 Agustus 2026.</p>
+          <time>5 Agustus 2026</time>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:24px;"><a class="cta" style="border-bottom:1px solid var(--clay); padding-bottom:2px; font-family:'IBM Plex Mono',monospace; font-size:0.78rem; text-transform:uppercase; color:var(--clay); text-decoration:none;" href="pengumuman.html">Lihat semua pengumuman →</a></p>
+  </div>
+</section>
+
+<footer id="kontak-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-grid">
+      <div>
+        <h4>Kantor Desa Sampetan</h4>
+        <p>Jl. Raya Sampetan No. 12<br>Kec. Gladagsari, Kab. Boyolali<br>Jawa Tengah 57385 · ± 900 MDPL, lereng selatan Gunung Merbabu</p>
+      </div>
+      <div>
+        <h4>Jam Layanan</h4>
+        <p>Senin–Kamis: 08.00–15.00<br>Jumat: 08.00–11.00<br>Sabtu–Minggu: Tutup</p>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <p><a href="tel:+622212345678">(022) 1234 5678</a><br><a href="mailto:desa@sampetan.go.id">desa@sampetan.go.id</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Pemerintah Desa Sampetan. Seluruh hak dilindungi.</div>
+  </div>
+</footer>
+
+</body>
+</html>
