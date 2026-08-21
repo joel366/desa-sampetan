@@ -1,731 +1,311 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Beranda — Desa Sampetan</title>
+<title>Desa Sampetan — Kaki Gunung Merbabu</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
-<script src="nav.js"></script>
+
 <body>
 
 <header>
-    <nav class="nav">
+<nav class="nav">
 
-        <a href="index.html" class="brand" style="text-decoration:none;">
+<a href="index.html" class="brand">
+<svg class="brand-mark" viewBox="0 0 40 40" fill="none">
+<path d="M20 4 L34 16 V34 H6 V16 Z" fill="#33502E"/>
+<path d="M20 4 L34 16 H6 Z" fill="#9C5A34"/>
+<rect x="16" y="22" width="8" height="12" fill="#F8F7EF"/>
+</svg>
 
-            <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
-                <path d="M20 4 L34 16 V34 H6 V16 Z" fill="#33502E"/>
-                <path d="M20 4 L34 16 H6 Z" fill="#9C5A34"/>
-                <rect x="16" y="22" width="8" height="12" fill="#F8F7EF"/>
-            </svg>
+<span>
+Desa Sampetan
+<span class="brand-sub">± 900 MDPL · Kaki Gunung Merbabu</span>
+</span>
+</a>
 
-            <span>
-                Desa Sampetan
-                <span class="brand-sub">
-                    ± 900 MDPL · Kaki Gunung Merbabu
-                </span>
-            </span>
+<ul class="navlinks">
 
-        </a>
+<li>
+<a href="index.html" class="active">
+<span class="pos-tag">01</span>
+Beranda
+</a>
+</li>
 
-        <!-- NAVIGASI -->
-        <ul class="navlinks">
+<li>
+<a href="profil.html">
+<span class="pos-tag">02</span>
+Profil Desa
+</a>
+</li>
 
-            <li>
-                <a href="index.html" class="active">
-                    <span class="pos-tag"></span>
-                    Beranda
-                </a>
-            </li>
+<li>
+<a href="layanan.html">
+<span class="pos-tag">03</span>
+Layanan
+</a>
+</li>
 
-            <li>
-                <a href="profil.html">
-                    <span class="pos-tag"></span>
-                    Profil Desa
-                </a>
-            </li>
+<li>
+<a href="agenda.html">
+<span class="pos-tag">04</span>
+Agenda
+</a>
+</li>
 
-            <li>
-                <a href="layanan.html">
-                    <span class="pos-tag"></span>
-                    Layanan
-                </a>
-            </li>
+<li>
+<a href="pengumuman.html">
+<span class="pos-tag">05</span>
+Pengumuman
+</a>
+</li>
 
-            <li>
-                <a href="agenda.html">
-                    <span class="pos-tag"></span>
-                    Agenda
-                </a>
-            </li>
+<li>
+<a href="kontak.html">
+<span class="pos-tag">06</span>
+Kontak
+</a>
+</li>
 
-            <li>
-                <a href="pengumuman.html">
-                    <span class="pos-tag"></span>
-                    Pengumuman
-                </a>
-            </li>
+</ul>
 
-            <li>
-                <a href="kontak.html">
-                    <span class="pos-tag"></span>
-                    Kontak
-                </a>
-            </li>
+<button
+class="navtoggle"
+type="button"
+aria-label="Buka menu navigasi"
+aria-expanded="false">
 
-        </ul>
+<svg width="22" height="22"
+viewBox="0 0 24 24"
+fill="none"
+stroke="currentColor"
+stroke-width="1.6">
 
-        <!-- TOMBOL HAMBURGER -->
-        <button
-            class="navtoggle"
-            id="navToggle"
-            aria-label="Buka menu"
-            aria-expanded="false"
-            type="button">
+<path d="M3 6h18M3 12h18M3 18h18"/>
 
-            <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6">
+</svg>
 
-                <path d="M3 6h18M3 12h18M3 18h18"/>
+</button>
 
-            </svg>
-
-        </button>
-
-    </nav>
+</nav>
 </header>
 
 
-<!-- HERO -->
-<section class="hero" id="hero">
+<section class="hero">
 
-    <div class="hero-inner">
+<div class="hero-inner">
 
-        <div class="elev-badge">
+<div class="elev-badge">
+⌁ ± 900 MDPL · Lereng Merbabu
+</div>
 
-            <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8">
+<p class="hero-eyebrow">
+Pemerintah Desa Sampetan
+</p>
 
-                <path d="M3 20l6-11 4 6 3-5 5 10z"/>
+<h1>
+Desa sejuk di kaki Gunung Merbabu
+</h1>
 
-            </svg>
+<p>
+Portal informasi dan pelayanan resmi Desa Sampetan,
+Kecamatan Gladagsari, Kabupaten Boyolali.
+</p>
 
-            ± 900 MDPL · Lereng Selatan Gunung Merbabu
+<div class="hero-links">
 
-        </div>
+<a href="profil.html" class="btn btn-solid">
+Profil Desa →
+</a>
 
-        <p class="hero-eyebrow">
-            Portal Resmi Warga · Kec. Gladagsari, Boyolali
-        </p>
+<a href="layanan.html" class="btn btn-outline">
+Layanan Desa
+</a>
 
-        <h1>
-            Selamat Datang di Desa Sampetan
-        </h1>
+</div>
 
-        <p>
-            Informasi layanan, agenda kegiatan, dan pengumuman resmi desa
-            — diperbarui setiap minggu oleh perangkat desa.
-        </p>
-
-        <div class="hero-links">
-
-            <a class="btn btn-solid" href="layanan.html">
-                Lihat Layanan
-            </a>
-
-            <a class="btn btn-outline" href="pengumuman.html">
-                Papan Pengumuman
-            </a>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- KONTUR -->
-<div class="kontur on-light" aria-hidden="true">
+<section>
 
-    <svg viewBox="0 0 1200 52" preserveAspectRatio="none">
+<div class="wrap">
 
-        <path
-            d="M0 10 C150 28 350 -4 520 14 C700 32 900 2 1200 18"
-            fill="none"
-            stroke="#16231A"
-            stroke-width="1.4"
-            opacity="0.35"/>
+<div class="section-head">
 
-        <path
-            d="M0 26 C180 8 360 40 560 24 C760 8 980 36 1200 22"
-            fill="none"
-            stroke="#16231A"
-            stroke-width="1.4"
-            opacity="0.5"/>
+<p class="eyebrow">01 · Layanan</p>
 
-        <path
-            d="M0 40 C200 24 420 48 620 32 C820 16 1020 44 1200 34"
-            fill="none"
-            stroke="#16231A"
-            stroke-width="1.4"
-            opacity="0.7"/>
+<h2>
+Layanan untuk kebutuhan warga
+</h2>
 
-    </svg>
+<p>
+Akses informasi administrasi desa dengan lebih mudah.
+</p>
 
 </div>
 
 
-<!-- LAYANAN -->
-<section id="layanan-ringkas">
+<div class="layanan-grid">
 
-    <div class="wrap">
+<div class="layanan-card">
 
-        <div class="section-head">
+<span class="pos-tag">01</span>
 
-            <p class="eyebrow">
-                · Layanan Desa
-            </p>
+<svg class="layanan-icon"
+viewBox="0 0 24 24"
+fill="none"
+stroke="currentColor"
+stroke-width="1.4">
 
-            <h2>
-                Urus keperluan administrasi tanpa antre lama
-            </h2>
+<path d="M5 3h9l5 5v13H5z"/>
+<path d="M14 3v5h5"/>
+<path d="M9 13h6M9 17h6"/>
 
-            <p>
-                Enam layanan utama, dapat diajukan langsung secara daring.
-            </p>
+</svg>
 
-        </div>
+<h3>Surat Keterangan</h3>
 
-    </div>
+<p>
+Domisili, tidak mampu, usaha, dan kelahiran.
+</p>
 
-
-    <div class="wrap">
-
-        <div class="layanan-grid">
-
-            <div class="layanan-card">
-
-                <span class="pos-tag"></span>
-
-                <svg
-                    class="layanan-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.4">
-
-                    <path d="M5 3h9l5 5v13H5z"/>
-                    <path d="M14 3v5h5"/>
-                    <path d="M9 13h6M9 17h6"/>
-
-                </svg>
-
-                <h3>
-                    Surat Keterangan
-                </h3>
-
-                <p>
-                    Domisili, tidak mampu, usaha, dan kelahiran.
-                    Terbit dalam 1–2 hari kerja.
-                </p>
-
-                <a class="cta" href="layanan-surat-keterangan.html">
-                    Ajukan surat →
-                </a>
-
-            </div>
-
-
-            <div class="layanan-card">
-
-                <span class="pos-tag"></span>
-
-                <svg
-                    class="layanan-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.4">
-
-                    <circle cx="12" cy="8" r="3.2"/>
-                    <path d="M5 21c0-4 3.2-6.5 7-6.5S19 17 19 21"/>
-
-                </svg>
-
-                <h3>
-                    Kependudukan
-                </h3>
-
-                <p>
-                    Pengurusan KTP, KK, dan pindah domisili
-                    melalui perangkat RT/RW.
-                </p>
-
-                <a class="cta" href="layanan-kependudukan.html">
-                    Lihat syarat →
-                </a>
-
-            </div>
-
-
-            <div class="layanan-card">
-
-                <span class="pos-tag"></span>
-
-                <svg
-                    class="layanan-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.4">
-
-                    <path d="M4 20V10l8-6 8 6v10"/>
-                    <path d="M9 20v-6h6v6"/>
-
-                </svg>
-
-                <h3>
-                    Bantuan Sosial
-                </h3>
-
-                <p>
-                    Pendaftaran dan pengecekan status penerima
-                    program bantuan.
-                </p>
-
-                <a class="cta" href="layanan-bansos.html">
-                    Cek status →
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <p style="margin-top:24px;">
-
-            <a
-                class="cta"
-                style="border-bottom:1px solid var(--clay); padding-bottom:2px; font-family:'IBM Plex Mono',monospace; font-size:0.78rem; text-transform:uppercase; color:var(--clay); text-decoration:none;"
-                href="layanan.html">
-
-                Lihat semua layanan →
-
-            </a>
-
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- KONTUR DARK -->
-<div class="kontur on-dark" aria-hidden="true">
-
-    <svg viewBox="0 0 1200 52" preserveAspectRatio="none">
-
-        <path
-            d="M0 10 C150 28 350 -4 520 14 C700 32 900 2 1200 18"
-            fill="none"
-            stroke="#DCD5BE"
-            stroke-width="1.4"
-            opacity="0.35"/>
-
-        <path
-            d="M0 26 C180 8 360 40 560 24 C760 8 980 36 1200 22"
-            fill="none"
-            stroke="#DCD5BE"
-            stroke-width="1.4"
-            opacity="0.5"/>
-
-        <path
-            d="M0 40 C200 24 420 48 620 32 C820 16 1020 44 1200 34"
-            fill="none"
-            stroke="#DCD5BE"
-            stroke-width="1.4"
-            opacity="0.7"/>
-
-    </svg>
+<a class="cta" href="layanan-surat-keterangan.html">
+Ajukan surat →
+</a>
 
 </div>
 
 
-<!-- AGENDA -->
-<section class="agenda-band" id="agenda-ringkas">
+<div class="layanan-card">
 
-    <div class="wrap">
+<span class="pos-tag">02</span>
 
-        <div class="section-head on-dark">
+<svg class="layanan-icon"
+viewBox="0 0 24 24"
+fill="none"
+stroke="currentColor"
+stroke-width="1.4">
 
-            <p class="eyebrow">
-                · Agenda Desa
-            </p>
+<circle cx="12" cy="8" r="3.2"/>
+<path d="M5 21c0-4 3.2-6.5 7-6.5S19 17 19 21"/>
 
-            <h2>
-                Kegiatan yang akan berlangsung
-            </h2>
+</svg>
 
-            <p>
-                Sebagian besar kegiatan terbuka untuk seluruh warga.
-            </p>
+<h3>Kependudukan</h3>
 
-        </div>
+<p>
+Informasi KTP, KK, dan pindah domisili.
+</p>
 
-
-        <div class="agenda-list">
-
-            <div class="agenda-item">
-
-                <div class="agenda-date">
-                    AGU
-                    <strong>21</strong>
-                </div>
-
-                <div class="agenda-rule"></div>
-
-                <div class="agenda-body">
-
-                    <h3>
-                        Musyawarah Rencana Pembangunan Desa
-                    </h3>
-
-                    <span>
-                        09.00 WIB · Balai Desa Sampetan
-                    </span>
-
-                </div>
-
-                <span class="agenda-tag">
-                    Wajib RT/RW
-                </span>
-
-            </div>
-
-
-            <div class="agenda-item">
-
-                <div class="agenda-date">
-                    AGU
-                    <strong>24</strong>
-                </div>
-
-                <div class="agenda-rule"></div>
-
-                <div class="agenda-body">
-
-                    <h3>
-                        Posyandu Balita & Ibu Hamil
-                    </h3>
-
-                    <span>
-                        08.00 WIB · Pos Kesehatan Dusun II
-                    </span>
-
-                </div>
-
-                <span class="agenda-tag">
-                    Umum
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <p style="margin-top:24px;">
-
-            <a
-                href="agenda.html"
-                style="font-family:'IBM Plex Mono',monospace; font-size:0.78rem; text-transform:uppercase; color:var(--clay-soft); text-decoration:none; border-bottom:1px solid var(--clay-soft); padding-bottom:2px;">
-
-                Lihat semua agenda →
-
-            </a>
-
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- KONTUR -->
-<div class="kontur on-light" aria-hidden="true">
-
-    <svg viewBox="0 0 1200 52" preserveAspectRatio="none">
-
-        <path
-            d="M0 10 C150 28 350 -4 520 14 C700 32 900 2 1200 18"
-            fill="none"
-            stroke="#16231A"
-            stroke-width="1.4"
-            opacity="0.35"/>
-
-        <path
-            d="M0 26 C180 8 360 40 560 24 C760 8 980 36 1200 22"
-            fill="none"
-            stroke="#16231A"
-            stroke-width="1.4"
-            opacity="0.5"/>
-
-        <path
-            d="M0 40 C200 24 420 48 620 32 C820 16 1020 44 1200 34"
-            fill="none"
-            stroke="#16231A"
-            stroke-width="1.4"
-            opacity="0.7"/>
-
-    </svg>
+<a class="cta" href="layanan-kependudukan.html">
+Lihat syarat →
+</a>
 
 </div>
 
 
-<!-- PENGUMUMAN -->
-<section id="pengumuman-ringkas">
+<div class="layanan-card">
 
-    <div class="wrap">
+<span class="pos-tag">03</span>
 
-        <div class="section-head">
+<svg class="layanan-icon"
+viewBox="0 0 24 24"
+fill="none"
+stroke="currentColor"
+stroke-width="1.4">
 
-            <p class="eyebrow">
-                · Papan Pengumuman
-            </p>
+<path d="M4 20V10l8-6 8 6v10"/>
+<path d="M9 20v-6h6v6"/>
 
-            <h2>
-                Informasi resmi dari kantor desa
-            </h2>
+</svg>
 
-            <p>
-                Ditempel dan diperbarui langsung oleh perangkat desa.
-            </p>
+<h3>Bantuan Sosial</h3>
 
-        </div>
+<p>
+Pendaftaran dan pengecekan status bantuan.
+</p>
 
+<a class="cta" href="layanan-bansos.html">
+Cek status →
+</a>
 
-        <div class="papan">
+</div>
 
-            <div class="papan-grid">
+</div>
 
-                <div class="note penting">
-
-                    <p class="note-tag">
-                        Penting
-                    </p>
-
-                    <h3>
-                        Penutupan Sementara Jembatan Dusun III
-                    </h3>
-
-                    <p>
-                        Perbaikan struktur berlangsung 19–23 Agustus.
-                        Warga diarahkan melalui jalur alternatif Dusun I.
-                    </p>
-
-                    <time>
-                        18 Agustus 2026
-                    </time>
-
-                </div>
-
-
-                <div class="note">
-
-                    <p class="note-tag">
-                        Layanan
-                    </p>
-
-                    <h3>
-                        Jadwal Pelayanan Surat Diperpanjang
-                    </h3>
-
-                    <p>
-                        Mulai minggu ini, loket surat-menyurat buka hingga
-                        pukul 15.00 setiap Senin–Kamis.
-                    </p>
-
-                    <time>
-                        15 Agustus 2026
-                    </time>
-
-                </div>
-
-
-                <div class="note penting">
-
-                    <p class="note-tag">
-                        Penting
-                    </p>
-
-                    <h3>
-                        Batas Akhir Pembayaran PBB
-                    </h3>
-
-                    <p>
-                        Pembayaran Pajak Bumi dan Bangunan tahun berjalan
-                        paling lambat 31 Agustus 2026.
-                    </p>
-
-                    <time>
-                        5 Agustus 2026
-                    </time>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <p style="margin-top:24px;">
-
-            <a
-                class="cta"
-                style="border-bottom:1px solid var(--clay); padding-bottom:2px; font-family:'IBM Plex Mono',monospace; font-size:0.78rem; text-transform:uppercase; color:var(--clay); text-decoration:none;"
-                href="pengumuman.html">
-
-                Lihat semua pengumuman →
-
-            </a>
-
-        </p>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- FOOTER -->
 <footer id="kontak-footer">
 
-    <div class="wrap footer-inner">
+<div class="wrap footer-inner">
 
-        <div class="footer-grid">
+<div class="footer-grid">
 
-            <div>
+<div>
 
-                <h4>
-                    Kantor Desa Sampetan
-                </h4>
+<h4>Kantor Desa Sampetan</h4>
 
-                <p>
-                    Jl. Raya Sampetan No. 12<br>
-                    Kec. Gladagsari, Kab. Boyolali<br>
-                    Jawa Tengah 57385 · ± 900 MDPL,
-                    lereng selatan Gunung Merbabu
-                </p>
+<p>
+Jl. Raya Sampetan No. 12<br>
+Kec. Gladagsari, Kab. Boyolali<br>
+Jawa Tengah 57385
+</p>
 
-            </div>
+</div>
 
+<div>
 
-            <div>
+<h4>Jam Layanan</h4>
 
-                <h4>
-                    Jam Layanan
-                </h4>
+<p>
+Senin–Kamis: 08.00–15.00<br>
+Jumat: 08.00–11.00<br>
+Sabtu–Minggu: Tutup
+</p>
 
-                <p>
-                    Senin–Kamis: 08.00–15.00<br>
-                    Jumat: 08.00–11.00<br>
-                    Sabtu–Minggu: Tutup
-                </p>
+</div>
 
-            </div>
+<div>
 
+<h4>Kontak</h4>
 
-            <div>
+<p>
+<a href="tel:+622212345678">
+(022) 1234 5678
+</a><br>
 
-                <h4>
-                    Kontak
-                </h4>
+<a href="mailto:desa@sampetan.go.id">
+desa@sampetan.go.id
+</a>
+</p>
 
-                <p>
+</div>
 
-                    <a href="tel:+622212345678">
-                        (022) 1234 5678
-                    </a>
+</div>
 
-                    <br>
+<div class="footer-bottom">
+© 2026 Pemerintah Desa Sampetan. Seluruh hak dilindungi.
+</div>
 
-                    <a href="mailto:desa@sampetan.go.id">
-                        desa@sampetan.go.id
-                    </a>
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            © 2026 Pemerintah Desa Sampetan.
-            Seluruh hak dilindungi.
-
-        </div>
-
-    </div>
+</div>
 
 </footer>
 
 
-<!-- ==========================================
-     JAVASCRIPT MENU MOBILE
-     ========================================== -->
-
-<script>
-
-    const navToggle = document.getElementById("navToggle");
-    const navLinks = document.querySelector(".navlinks");
-
-    if (navToggle && navLinks) {
-
-        navToggle.addEventListener("click", function () {
-
-            navLinks.classList.toggle("open");
-
-            const isOpen = navLinks.classList.contains("open");
-
-            navToggle.setAttribute("aria-expanded", isOpen);
-
-        });
-
-
-        // Tutup menu setelah salah satu link diklik
-        navLinks.querySelectorAll("a").forEach(function (link) {
-
-            link.addEventListener("click", function () {
-
-                navLinks.classList.remove("open");
-
-                navToggle.setAttribute("aria-expanded", "false");
-
-            });
-
-        });
-
-    }
-
-</script>
-
+<script src="script.js"></script>
 
 </body>
 </html>
