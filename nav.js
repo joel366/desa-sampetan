@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     const navToggle = document.querySelector(".navtoggle");
     const navLinks = document.querySelector(".navlinks");
 
@@ -7,14 +8,24 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    navToggle.addEventListener("click", function () {
+    navToggle.addEventListener("click", function (e) {
+        e.preventDefault();
+
         navLinks.classList.toggle("open");
 
-        console.log("Menu:", navLinks.classList.contains("open"));
+        const isOpen = navLinks.classList.contains("open");
 
-        navToggle.setAttribute(
-            "aria-expanded",
-            navLinks.classList.contains("open")
-        );
+        navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
     });
+
+    // Tutup menu ketika link diklik
+    const links = navLinks.querySelectorAll("a");
+
+    links.forEach(function (link) {
+        link.addEventListener("click", function () {
+            navLinks.classList.remove("open");
+            navToggle.setAttribute("aria-expanded", "false");
+        });
+    });
+
 });
