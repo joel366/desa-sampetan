@@ -436,3 +436,53 @@ footer p, footer a{ font-size:0.9rem; color:rgba(237,240,225,0.75); text-decorat
 footer a:hover{ color: var(--mist); }
 .footer-bottom{ margin-top:44px; padding-top:20px; border-top:1px solid rgba(237,240,225,0.15); font-size:0.78rem; color:rgba(237,240,225,0.5); }
 @media (max-width:700px){ .footer-grid{ grid-template-columns:1fr; } }
+
+@media (max-width: 768px) {
+
+    .nav {
+        position: relative;
+    }
+
+    .navtoggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        color: inherit;
+        padding: 8px;
+    }
+
+    .navlinks {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 20px;
+        background: var(--paper, #F8F7EF);
+        z-index: 9999;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .navlinks.open {
+        display: flex;
+    }
+
+    .navlinks li {
+        width: 100%;
+        list-style: none;
+    }
+
+    .navlinks li a {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 14px 4px;
+        text-decoration: none;
+    }
+
+}
